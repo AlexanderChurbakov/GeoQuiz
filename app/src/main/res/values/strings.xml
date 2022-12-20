@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeoQuizz</string>
+    <string name="questionOne">Question One!</string>
+    <string name="questionTwo">Question TWO!</string>
+    <string name="questionThree">Question THREE!</string>
+    <string name="questionFour">Question FOUR!</string>
+
+
+</resources>
