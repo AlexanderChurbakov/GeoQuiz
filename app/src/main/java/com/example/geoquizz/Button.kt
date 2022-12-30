@@ -45,14 +45,14 @@ interface MyCustomButton {
 }
 
 interface MakeToast {
-    fun makeToast(message: String, duration: Int)
+    fun makeToast(text: String, duration: Int )
 
     class Base(
         private val context: Context
     ) : MakeToast {
 
-        override fun makeToast(message: String, duration: Int) {
-            Toast.makeText(context, message, Toast.LENGTH_SHORT)
+        override fun makeToast(text: String, duration: Int) {
+            Toast.makeText(context, text, Toast.LENGTH_SHORT)
                 .show()
         }
     }

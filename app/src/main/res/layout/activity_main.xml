@@ -37,6 +37,11 @@
             android:text="next">
         </Button>
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_check"
+        android:text="check">
+    </Button>
 
 </LinearLayout>

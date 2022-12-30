@@ -5,5 +5,9 @@
     <string name="questionThree">Question THREE!</string>
     <string name="questionFour">Question FOUR!</string>
 
+    <string name="warning_text">Are you sure you want to do this?</string>
+    <string name="show_answer_button">Show answer</string>
+    <string name="cheat_button">Cheat!</string>
+    <string name="judgment_toast">Cheating is wrong.</string>
 
 </resources>

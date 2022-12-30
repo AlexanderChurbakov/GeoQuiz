@@ -17,10 +17,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var trueButton: Button
     private lateinit var falseButton: Button
     private lateinit var quizViewModel: CustomViewModel
-    private lateinit var button: MyCustomButton
+//    private lateinit var button: MyCustomButton
+    private lateinit var button: TrueFalseButtons
 
     private val log: Logging = Logging.Console("chrb")
     private var answer = false
+    private val trueButtonCheck = TrueFalseButtons.Abstract
+        .TrueButton(this)
+    private val falseButtonCheck = TrueFalseButtons.Abstract
+        .FalseButton(this)
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,25 +38,28 @@ class MainActivity : AppCompatActivity() {
         trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.false_button)
         quizViewModel = (application as MyApplication).viewModel
+//        button = MyCustomButton.ButtonConcrete(quizViewModel,
+//            MakeToast.Base(this))
 
-        button = MyCustomButton.ButtonConcrete(quizViewModel,
-            MakeToast.Base(this))
         val questionTextId = quizViewModel.getQuestion()
         questionText.setText(questionTextId)
 
         nextButton.setOnClickListener {
             quizViewModel.moveToNext()
-            button.updateQuestion(questionText)
+//            button.updateQuestion(questionText)
         }
 
         trueButton.setOnClickListener {
-            answer = true
-            button.showToast(answer)
+//            answer = true
+//            button.showToast(answer)
+            trueButtonCheck.checkAnswer()
         }
 
         falseButton.setOnClickListener {
-            answer = false
-            button.showToast(answer)
+//            answer = false
+//            button.showToast(answer)
+                falseButtonCheck.checkAnswer()
+
         }
     }
 

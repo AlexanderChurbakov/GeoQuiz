@@ -31,6 +31,5 @@ class QuizViewModelTest {
         assertEquals(R.string.questionTwo,
             viewModel.getQuestion())
     }
-
 }
 
